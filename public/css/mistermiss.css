@@ -1,0 +1,157 @@
+.title__stud{
+    margin-bottom: 5vh;
+    font-family: Bitter;
+    padding: 1vw;
+}
+
+.about_mistermiss{
+    font-size: 23px;
+    margin-bottom: 40px;
+}
+
+.mistermiss_item{
+    display: flex;
+    margin-top: 20px;
+    -webkit-transform: translateX(10%);
+    transform: translateX(10%);
+    opacity: 0;
+    -webkit-transition: opacity .8s ease-in-out,
+    transform .8s ease-in-out;
+    transition: opacity .8s ease-in-out,
+    transform .8s ease-in-out;
+}
+
+.mistermiss_item.animate_scroll-active{
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.mistermiss_picture,.mistermiss_video{
+    padding-top: 27%;
+    position: relative;
+    margin-right: 2%;
+}
+
+.mistermiss_picture{
+    width: 21%;
+}
+
+.mistermiss_video{
+    width: 45%;
+    background: lightgray;
+}
+
+.mistermiss_picture img,.mistermiss_video iframe{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    object-fit: cover;
+}
+
+.mistermiss_info{
+    width: calc(100% - 45% - 21% - 4%);
+    background: #3C3C3A;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.mistermiss_title{
+    padding: 0;
+    margin: 0;
+    color: #129912;
+    font-weight: 300;
+    font-size: 1.5vw;
+    margin-bottom: .5vw;
+}
+
+.mistermiss_special{
+    color: white;
+    font-size: 1.1vw;
+}
+
+.mistermiss_group_btn{
+    margin-top: 2vw;
+}
+
+.mistermiss_btn{
+    width: 100%;
+    color: white;
+    background: #097309;
+    padding: .4em 0;
+    border: none;
+    outline: none;
+    font-size: 1.2vw;
+    margin-bottom: 1vw;
+    cursor: pointer;
+}
+
+.mistermiss_btn_red{
+    background: #AC1515;
+}
+
+@media (max-width: 992px) {
+    .about_mistermiss{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about_mistermiss{
+        font-size: 16px;
+    }
+
+    .mistermiss_video{
+        display: none;
+    }
+
+    .mistermiss_picture{
+        width: calc(100px + (300 - 100) * ((100vw - 320px) / (768 - 320)));
+        padding-top: 42%;
+    }
+
+    .mistermiss_info{
+        width: calc(100% - 100px - 2%);
+    }
+
+    .mistermiss_title{
+        font-size: 2.3vw;
+    }
+    
+    .mistermiss_special{
+        font-size: 1.9vw;
+    }
+
+    .mistermiss_btn{
+        font-size: 1.9vw;
+    }
+}
+
+@media (max-width: 460px) {
+    .title__stud{
+        margin-bottom: 5vw;
+    }
+    .about_mistermiss{
+        font-size: 3.5vw;
+        margin-bottom: 30px;
+    }
+
+    .mistermiss_info{
+        padding: 10px;
+    }
+
+    .mistermiss_title{
+        font-size: 3.2vw;
+    }
+
+    .mistermiss_special{
+        font-size: 2.4vw;
+    }
+
+    .mistermiss_btn{
+        font-size: 2.3vw;
+    }
+}

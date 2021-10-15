@@ -1,0 +1,91 @@
+.header {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 65px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.title_contain {
+  width: 1280px;
+}
+
+.header_title {
+  font-size: 58pt;
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 10;
+  padding: 21px 8px 21px;
+  font-family: ArchitectsDaughter-Regular;
+  -webkit-margin-before: 0.67em;
+          margin-block-start: 0.67em;
+  -webkit-margin-after: 0.67em;
+          margin-block-end: 0.67em;
+}
+
+.header_shadow {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.47);
+  width: 100%;
+  height: 100%;
+  top:0;
+  z-index: 7;
+}
+
+.header_image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 5;
+}
+
+@media (max-width: 1280px) {
+  .title_contain {
+    width: 100%;
+    padding: 0 50px;
+  }
+  .header_title {
+    font-size: 50pt;
+  }
+}
+
+@media (max-width: 767px) {
+  .header_title {
+    font-size: 35pt;
+  }
+}
+
+@media (max-width: 460px) {
+  .header {
+    padding: 60px 0 30px 0;
+  }
+  .title_contain {
+    padding: 0 15px;
+  }
+  .header_title {
+    font-size: 30pt !important;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .header_title {
+    font-size: 22pt;
+  }
+}

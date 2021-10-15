@@ -1,0 +1,221 @@
+.stud_contain {
+  max-width: 1280px;
+  margin: calc(65px + 3vh) auto 0px auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px 48px;
+}
+
+.stud_list {
+  padding: 0 4vw;
+}
+
+.stud_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 40px;
+  -webkit-transform: translateX(10%);
+          transform: translateX(10%);
+  opacity: 0;
+  -webkit-transition: opacity .8s ease-in-out,
+  transform .8s ease-in-out;
+  transition: opacity .8s ease-in-out,
+  transform .8s ease-in-out;
+}
+
+.stud_item.animate_scroll-active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
+.stud_photo_block {
+  width: 33.333333%;
+  position: relative;
+  padding-bottom: 42%;
+  margin-right: 2vw;
+  height: 0;
+}
+
+.stud_photo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.stud_info {
+  width: calc(100% - 33.333333% - 20px);
+}
+
+.stud_head {
+  text-align: center;
+}
+
+.stud_name {
+  font-family: Bitter;
+  font-size: 18px;
+  font-weight: 700;
+  padding-bottom: 1vh;
+  border-bottom: 2px solid lightgray;
+  margin-bottom: 1vh;
+  position: relative;
+  cursor: pointer;
+  padding: 0 35px;
+}
+
+.icons_stud_block {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.stud_name_icon {
+  height: 35px;
+  -webkit-transition: -webkit-transform .25s ease-in-out;
+  transition: -webkit-transform .25s ease-in-out;
+  transition: transform .25s ease-in-out;
+  transition: transform .25s ease-in-out, -webkit-transform .25s ease-in-out;
+  color: gray;
+}
+
+.stud_name_icon.active {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.stud_status {
+  font-size: 18px;
+  color: #097309;
+}
+
+.stud_info_content {
+  padding: 0 10px;
+  font-size: 17px;
+  overflow: hidden;
+  -webkit-transition: max-height 0.3s ease-in-out;
+  transition: max-height 0.3s ease-in-out;
+  margin-top: 2vw;
+}
+
+.stud_info_content p{
+  margin-top:0;
+}
+
+.stud_description {
+  font-family: Bitter;
+  list-style-type: square;
+  padding-left: 20px;
+  font-weight: 600;
+}
+
+.social_net_stud {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 20px;
+  margin-top: 30px;
+}
+
+.social_net_stud_icon {
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 2px;
+}
+
+.social_net_stud_icon img {
+  width: 25px;
+}
+
+@media (max-width: 1020px) {
+  .stud_list {
+    padding: 0;
+  }
+  .stud_name {
+    font-size: 1.9vw;
+  }
+  .stud_status {
+    font-size: 1.8vw;
+  }
+  .stud_info_content {
+    font-size: 1.7vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .stud_contain {
+    padding: 0 4vw;
+  }
+  .title__stud {
+    font-size: 5vw;
+  }
+  .social_net_stud_icon img {
+    width: 20px;
+  }
+  .stud_name {
+    padding: 0 25px;
+  }
+  .stud_name_icon {
+    height: 25px;
+  }
+  .stud_description{
+    padding: 0;
+  }
+}
+
+@media (max-width: 470px) {
+  .title__stud {
+    font-size: 8vw;
+  }
+  .stud_item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 5vw;
+    margin-bottom: 20px;
+  }
+  .stud_photo_block {
+    width: 100%;
+    padding-bottom: 100%;
+    margin: 0;
+  }
+  .stud_info_content {
+    margin-top: 2.5vw;
+  }
+  .stud_info {
+    width: 100%;
+  }
+  .stud_name {
+    font-size: 3vw;
+    padding: 1vh 25px;
+  }
+  .stud_status {
+    font-size: 3.4vw;
+  }
+  .stud_info_content {
+    font-size: 3.3vw;
+    padding: 0;
+  }
+  .social_net_stud {
+    margin-top: 15px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .social_net_stud .social_net_stud_icon img {
+    width: 5.5vw;
+  }
+}
